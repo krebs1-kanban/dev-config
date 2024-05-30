@@ -17,8 +17,8 @@ services:
   frontend:
     container_name: frontend
     build:
-      context: ../project-management-client
-      dockerfile: ../dev-config/Dockerfile.client
+      context: ../frontend
+      dockerfile: ../dev-config/Dockerfile.frontend
     ports:
       - "3000:3000"
     volumes:
@@ -30,8 +30,8 @@ services:
   backend:
     container_name: backend
     build: 
-      context: ../project-management-server
-      dockerfile: ../dev-config/Dockerfile.server
+      context: ../backend
+      dockerfile: ../dev-config/Dockerfile.backend
     ports:
       - "4200:4200"
     environment:
