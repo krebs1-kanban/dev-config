@@ -9,12 +9,6 @@ COPY pnpm-lock.yaml .
 
 RUN pnpm install
 
-COPY ./prisma ./prisma
-
-RUN npx prisma generate
-
 COPY . .
 
 EXPOSE 4200
-
-CMD ["pnpm", "run", "start:dev"]
